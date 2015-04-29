@@ -64,6 +64,15 @@ h1{
     transition-delay:0.5s;
     opacity: 1;
   }
+
+  .fa-times{
+    position: absolute;
+    top: 73px;
+    left: 908px;
+    font-size: 2.5em;
+    color: #FFF;
+  }
+
 }
 
 .popup.ng-hide{
@@ -91,6 +100,14 @@ h1{
       }
 
     }
+
+    .slide11{
+      background: red;
+    }
+
+    .slide12{
+      background: blue;
+    }
 }
 
 
@@ -105,22 +122,31 @@ h1{
 
 .map-btn{
 	@extend .btn;
-	top: 700px;
-	left: 990px;
+  @extend .bottom-btn;
+  @include at2x('../images/map',"png", 65px, 54px);
+	left: 914px;
+  border-radius:5px 0 0 5px;
 }
 
 .video-btn{
   @extend .btn;
-  top: 700px;
+  @extend .bottom-btn;
+  @include at2x('../images/play',"png", 54px, 54px);
   left: 0;
+  border-radius: 0 5px 5px 0;
+  transition: all 1s;
+
+  &[disabled]{
+    opacity: 0.3;
+  }
 }
 
 .map{
   @extend .inherit-size;
-  @include at2x('../images/map-bg',"png", 1043px, 672px);
+  @include at2x('../images/map-bg',"png", 1001px, 645px);
   background-color: $backgroundGreenLight;
   background-repeat: no-repeat;
-  background-position: 0 55px;
+  background-position: 0 71px;
   position: absolute;
 
   h1{
@@ -133,8 +159,8 @@ h1{
   	@include at2x('../images/asthma',"png", 74px, 74px);
   	width: 74px;
   	height: 74px;
-  	top: 222px;
-  	left: 68px;
+  	top: 238px;
+    left: 67px;
   }
 
   .asthma-treatment-btn{
@@ -142,8 +168,8 @@ h1{
   	@include at2x('../images/asthma-treatment',"png", 134px, 91px);
   	width: 134px;
   	height: 91px;
-  	top: 345px;
-    left: 240px;
+  	top: 361px;
+    left: 241px;
   }
 
   .overestimating-btn{
@@ -151,8 +177,8 @@ h1{
   	@include at2x('../images/overestimating',"png", 134px, 91px);
   	width: 134px;
   	height: 91px;
-  	top: 345px;
-    left: 402px;
+  	top: 361px;
+    left: 403px;
   }
 
   .lacking-btn{
@@ -160,8 +186,8 @@ h1{
   	@include at2x('../images/lacking',"png", 134px, 91px);
   	width: 134px;
   	height: 91px;
-  	top: 345px;
-    left: 565px;
+  	top: 361px;
+    left: 564px;
   }
 
   .improving-btn{
@@ -169,8 +195,8 @@ h1{
   	@include at2x('../images/improving',"png", 135px, 91px);
   	width: 135px;
   	height: 91px;
-  	top: 357px;
-  	left: 788px;
+  	top: 360px;
+    left: 755px;
   }
 
   .good-btn{
@@ -178,9 +204,8 @@ h1{
   	@include at2x('../images/good',"png", 163px, 57px);
   	width: 163px;
   	height: 57px;
-  	top: 262px;
-    left: 793px;
-
+  	top: 276px;
+    left: 791px;
   }
 
   .corticosteroids-btn{
@@ -188,7 +213,7 @@ h1{
   	@include at2x('../images/corticosteroids',"png", 185px, 56px);
   	width: 185px;
   	height: 56px;
-  	top: 469px;
+  	top: 484px;
     left: 322px;
   }
 
@@ -197,8 +222,8 @@ h1{
   	@include at2x('../images/horizons',"png", 74px, 75px);
   	width: 74px;
   	height: 75px;
-  	top: 38px;
-    left: 899px;
+  	top: 46px;
+    left: 897px;
   }
 
 }

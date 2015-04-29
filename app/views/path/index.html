@@ -1,7 +1,7 @@
 <div class="swiper-container" swiper>
 	
-	<button ui-sref="map" class="map-btn">Map</button>
-	<button ng-click="showVideo = !showVideo" class="video-btn" ng-disabled="noVid">{{video}}</button>
+	<button ui-sref="map" class="map-btn"></button>
+	<button ng-click="showVideo = !showVideo" class="video-btn" ng-disabled="noVid"></button>
 	
 	<div class="swiper-wrapper">
 		<div ui-view="slide11" class="swiper-slide slide11" vid="http://media.w3.org/2010/05/sintel/trailer.mp4"></div>
@@ -9,7 +9,7 @@
 	</div>
 	
 	<div class="popup video" ng-show="showVideo">
-		<button ng-click="showVideo = !showVideo">close</button>
+		<i class="fa fa-times" ng-click="showVideo = !showVideo"></i>
 	</div>
 
 </div>

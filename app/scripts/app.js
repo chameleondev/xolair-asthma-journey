@@ -46,24 +46,11 @@ angular
 	      views : {
 	      	'main' : {
 	      		templateUrl: "views/path/index.html",
-	      		controller : function($scope,Videos){
-	      			$scope.video = Videos.name;
+	      		controller : function($scope){
+	      			
 	      			// $scope.$on('$viewContentLoaded',function(event){
 	      			// 	alert('loaded')
 	      			// });
-
-	    			// $scope.videoNotPresent = function(){
-
-	    			// 	var ele = document.querySelector('.swiper-slide-active');
-	    			// 	console.log('hello');
-	    				
-	    			// 	if (angular.element(ele).attr('vid')) {
-	    			// 		return false;
-	    			// 	}else{
-	    			// 		return true;
-	    			// 	}
-	    				
-	    			// }
 	      		}
 	      	},
 	      	'slide11@path' : {
@@ -82,12 +69,3 @@ angular
 	    })
 
   	});
-
-angular
-  .module('xolairAsthmaJourneyApp').factory('Videos',function(){
-
-  	return{
-  		name : 'Video of the year!'
-  	};
-
-  });
