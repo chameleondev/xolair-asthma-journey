@@ -1,20 +1,207 @@
 
 @import 'myVars';
 @import 'myExtends';
+@import 'myMixins';
 
 
 body{
   margin:0;
   padding: 0;
+  width: 1024px;
+  height: 768px;
 }
+
+.ng-enter{
+	opacity: 0;
+	transform : scale(0.8);
+	transition : 1s all;
+}
+
+.ng-enter-active{
+	opacity: 1;
+	transform : scale(1);
+}
+
+.ng-leave{
+	opacity: 1;
+	transform : scale(1);
+	transition : 1s all;
+}
+
+.ng-leave-active{
+	opacity: 0;
+	transform : scale(1.2);
+}
+
+
+
+h1{
+  height: 33px;
+  color: #FFF;
+  background-color: $titleBg;
+  padding: 20px 50px;
+  border-radius: 0 10px 10px 0;
+  width: 345px;
+  opacity: 0;
+  position: relative;
+  left: -445px;
+}
+
+.popup{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.8);
+  opacity: 1;
+  z-index: 999999;
+  transition: 1s all;
+
+  video{
+    @extend .absolute-center;
+    transition: 1s all;
+    transition-delay:0.5s;
+    opacity: 1;
+  }
+}
+
+.popup.ng-hide{
+  opacity: 0;
+
+  video{
+    top:80px;
+    opacity: 0;
+  }
+}
+
+
+.swiper-container {
+    @extend .inherit-size;
+
+    .swiper-slide-active{
+      
+      h1{
+        opacity: 1;
+        left:0;
+        -webkit-transition: 1s all; /* Safari */
+        transition: 1s all;
+        -webkit-transition-delay: 0.5s; /* Safari */
+        transition-delay: 0.5s;
+      }
+
+    }
+}
+
+
 
 .container{
   width: 1024px;
   height: 768px;
-  background: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.map-btn{
+	@extend .btn;
+	top: 700px;
+	left: 990px;
+}
+
+.video-btn{
+  @extend .btn;
+  top: 700px;
+  left: 0;
 }
 
 .map{
-  @extend .slide-container;
-  background: $backgroundGreenLight;
+  @extend .inherit-size;
+  @include at2x('../images/map-bg',"png", 1043px, 672px);
+  background-color: $backgroundGreenLight;
+  background-repeat: no-repeat;
+  background-position: 0 55px;
+  position: absolute;
+
+  h1{
+    opacity: 1;
+    left: 0;
+  }
+
+  .asthma-btn{
+  	@extend .btn;
+  	@include at2x('../images/asthma',"png", 74px, 74px);
+  	width: 74px;
+  	height: 74px;
+  	top: 222px;
+  	left: 68px;
+  }
+
+  .asthma-treatment-btn{
+  	@extend .btn;
+  	@include at2x('../images/asthma-treatment',"png", 134px, 91px);
+  	width: 134px;
+  	height: 91px;
+  	top: 345px;
+    left: 240px;
+  }
+
+  .overestimating-btn{
+  	@extend .btn;
+  	@include at2x('../images/overestimating',"png", 134px, 91px);
+  	width: 134px;
+  	height: 91px;
+  	top: 345px;
+    left: 402px;
+  }
+
+  .lacking-btn{
+  	@extend .btn;
+  	@include at2x('../images/lacking',"png", 134px, 91px);
+  	width: 134px;
+  	height: 91px;
+  	top: 345px;
+    left: 565px;
+  }
+
+  .improving-btn{
+  	@extend .btn;
+  	@include at2x('../images/improving',"png", 135px, 91px);
+  	width: 135px;
+  	height: 91px;
+  	top: 357px;
+  	left: 788px;
+  }
+
+  .good-btn{
+  	@extend .btn;
+  	@include at2x('../images/good',"png", 163px, 57px);
+  	width: 163px;
+  	height: 57px;
+  	top: 262px;
+    left: 793px;
+
+  }
+
+  .corticosteroids-btn{
+  	@extend .btn;
+  	@include at2x('../images/corticosteroids',"png", 185px, 56px);
+  	width: 185px;
+  	height: 56px;
+  	top: 469px;
+    left: 322px;
+  }
+
+  .horizons-btn{
+  	@extend .btn;
+  	@include at2x('../images/horizons',"png", 74px, 75px);
+  	width: 74px;
+  	height: 75px;
+  	top: 38px;
+    left: 899px;
+  }
+
 }
+
+
+

@@ -1,4 +1,19 @@
-.slide-container{
+.inherit-size{
   width: inherit;
   height: inherit;
+}
+
+.btn{
+	border: none;
+	border-radius: 0;
+	position: absolute;
+	z-index: 99999;
+	background-color: rgba(0,0,0,0);
+	outline: none;
+}
+
+.absolute-center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
 }
