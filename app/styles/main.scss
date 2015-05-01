@@ -123,10 +123,29 @@ h1{
         transition-delay: 0.5s;
       }
 
+      .road4{
+        width:206px;
+        -webkit-transition: 1s linear all; /* Safari */
+        transition: 1s linear all;
+        -webkit-transition-delay: 0.5s; /* Safari */
+        transition-delay: 0.5s;
+      }
+
       &.slide13{
         .graph{
           background-position: 0 0;
           background-repeat: no-repeat;
+          -webkit-transition: 1s linear all; /* Safari */
+          transition: 1s linear all;
+          -webkit-transition-delay: 0.5s; /* Safari */
+          transition-delay: 0.5s;
+        }
+      }
+
+      &.slide14{
+        .circle{
+          transform:rotate(0deg);
+          opacity: 1;
           -webkit-transition: 1s linear all; /* Safari */
           transition: 1s linear all;
           -webkit-transition-delay: 0.5s; /* Safari */
@@ -146,6 +165,27 @@ h1{
         }
       }
 
+      &.slide15{
+        .bg2{
+          -webkit-transition: 1s linear all; /* Safari */
+          transition: 1s linear all;
+          -webkit-transition-delay: 0.5s; /* Safari */
+          transition-delay: 0.5s;
+          opacity: 1;
+          top: 155px;
+        }
+      }
+
+      &.slide151{
+        .bg2{
+          -webkit-transition: 1s linear all; /* Safari */
+          transition: 1s linear all;
+          -webkit-transition-delay: 0.5s; /* Safari */
+          transition-delay: 0.5s;
+          top: 203px;
+          opacity: 1;
+        }
+      }
 
     }
 
@@ -179,6 +219,16 @@ h1{
       z-index: -100;
     }
 
+    .road4{
+      @include at2x('../images/road4',"png", 206px, 109px);
+      width: 0;
+      height:109px;
+      position: absolute;
+      left: 669px;
+      top: 0;
+      z-index: -100;
+    }
+
     .slide13{
       .graph{
         @include at2x('../images/slide13/graph',"png", 804px, 172px);
@@ -188,6 +238,19 @@ h1{
         position: absolute;
         left: 121px;
         top: 317px;
+      }
+    }
+
+    .slide14{
+      .circle{
+        @include at2x('../images/slide14/circle',"png", 507px, 507px);
+        width: 507px;
+        height:507px;
+        position: absolute;
+        left: 212px;
+        top: 150px;
+        opacity: 0;
+        transform:rotate(-90deg);
       }
     }
 
@@ -202,6 +265,43 @@ h1{
         top: 366px;
       }
     }
+
+    .slide15{
+      .bg2{
+        @include at2x('../images/slide15/bg2',"png", 538px, 439px);
+        width: 538px;
+        height:439px;
+        position: absolute;
+        left: 486px;
+        top: 175px;
+        opacity: 0;
+      }
+    }
+
+    .slide151{
+      .bg2{
+        @include at2x('../images/slide151/bg2',"png", 546px, 264px);
+        width: 546px;
+        height:264px;
+        position: absolute;
+        left: 478px;
+        top: 223px;
+        opacity: 0;
+      }
+    }
+
+    .slide16{
+      .bg2{
+        @include at2x('../images/slide16/bg2',"png", 546px, 264px);
+        width: 546px;
+        height:264px;
+        position: absolute;
+        left: 478px;
+        top: 223px;
+        opacity: 0;
+      }
+    }
+
 
 }
 

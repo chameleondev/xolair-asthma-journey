@@ -71,8 +71,68 @@ angular
 
 	      		}
 	      	},
+	      	'slide14@path' : {
+	      		templateUrl: "views/path/slide14.html",
+	      		controller : function($scope){
+
+	      		}
+	      	},
 	      	'slide141@path' : {
 	      		templateUrl: "views/path/slide141.html",
+	      		controller : function($scope){
+
+	      		}
+	      	},
+	      	'slide142@path' : {
+	      		templateUrl: "views/path/slide142.html",
+	      		controller : function($scope){
+
+	      		}
+	      	},
+	      	'slide15@path' : {
+	      		templateUrl: "views/path/slide15.html",
+	      		controller : function($scope){
+
+	      		}
+	      	},
+	      	'slide151@path' : {
+	      		templateUrl: "views/path/slide151.html",
+	      		controller : function($scope){
+
+	      		}
+	      	},
+	      	'slide16@path' : {
+	      		templateUrl: "views/path/slide16.html",
+	      		controller : function($scope){
+
+	      		}
+	      	},
+	      	'slide161@path' : {
+	      		templateUrl: "views/path/slide161.html",
+	      		controller : function($scope){
+
+	      		}
+	      	},
+	      	'slide162@path' : {
+	      		templateUrl: "views/path/slide162.html",
+	      		controller : function($scope){
+
+	      		}
+	      	},
+	      	'slide163@path' : {
+	      		templateUrl: "views/path/slide163.html",
+	      		controller : function($scope){
+
+	      		}
+	      	},
+	      	'slide17@path' : {
+	      		templateUrl: "views/path/slide17.html",
+	      		controller : function($scope){
+
+	      		}
+	      	},
+	      	'slide18@path' : {
+	      		templateUrl: "views/path/slide18.html",
 	      		controller : function($scope){
 
 	      		}
