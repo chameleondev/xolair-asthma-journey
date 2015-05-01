@@ -1,7 +1,7 @@
 
+@import 'myMixins';
 @import 'myVars';
 @import 'myExtends';
-@import 'myMixins';
 
 
 body{
@@ -99,15 +99,110 @@ h1{
         transition-delay: 0.5s;
       }
 
+      .road1{
+        width:357px;
+        -webkit-transition: 1s linear all; /* Safari */
+        transition: 1s linear all;
+        -webkit-transition-delay: 0.5s; /* Safari */
+        transition-delay: 0.5s;
+      }
+
+      .road2{
+        width:138px;
+        -webkit-transition: 1s linear all; /* Safari */
+        transition: 1s linear all;
+        -webkit-transition-delay: 0.5s; /* Safari */
+        transition-delay: 0.5s;
+      }
+
+      .road3{
+        width:264px;
+        -webkit-transition: 1s linear all; /* Safari */
+        transition: 1s linear all;
+        -webkit-transition-delay: 0.5s; /* Safari */
+        transition-delay: 0.5s;
+      }
+
+      &.slide13{
+        .graph{
+          background-position: 0 0;
+          background-repeat: no-repeat;
+          -webkit-transition: 1s linear all; /* Safari */
+          transition: 1s linear all;
+          -webkit-transition-delay: 0.5s; /* Safari */
+          transition-delay: 0.5s;
+        }
+      }
+
+
+      &.slide141{
+        .graph{
+          background-position: 0 0;
+          background-repeat: no-repeat;
+          -webkit-transition: 1s linear all; /* Safari */
+          transition: 1s linear all;
+          -webkit-transition-delay: 0.5s; /* Safari */
+          transition-delay: 0.5s;
+        }
+      }
+
+
     }
 
-    .slide11{
-      background: red;
+    .road1{
+      @include at2x('../images/road1',"png", 357px, 109px);
+      width: 0;
+      height:109px;
+      position: absolute;
+      left: 667px;
+      top: 0;
+      z-index: -100;
     }
 
-    .slide12{
-      background: blue;
+    .road2{
+      @include at2x('../images/road2',"png", 138px, 111px);
+      width: 0;
+      height:111px;
+      position: absolute;
+      left: 886px;
+      top: 0;
+      z-index: -100;
     }
+
+    .road3{
+      @include at2x('../images/road3',"png", 264px, 125px);
+      width: 0;
+      height:125px;
+      position: absolute;
+      left: 760px;
+      top: 0;
+      z-index: -100;
+    }
+
+    .slide13{
+      .graph{
+        @include at2x('../images/slide13/graph',"png", 804px, 172px);
+        background-position: 0 172px;
+        width: 804px;
+        height:172px;
+        position: absolute;
+        left: 121px;
+        top: 317px;
+      }
+    }
+
+    .slide141{
+      .graph{
+        @include at2x('../images/slide141/graph',"png", 330px, 150px);
+        background-position: 0 150px;
+        width: 330px;
+        height:150px;
+        position: absolute;
+        left: 588px;
+        top: 366px;
+      }
+    }
+
 }
 
 

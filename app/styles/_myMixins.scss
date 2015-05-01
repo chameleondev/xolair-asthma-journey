@@ -19,23 +19,3 @@
   }
 }
 
-@each $slide in $slides {
-
-  .#{$slide}{
-      
-      .slide-icon{
-        @include at2x('../images/#{$slide}/slide-icon',"png", 136px, 136px);
-        @extend .extend-slide-icon;
-      }
-      
-    }
-
-    .swiper-slide-active{
-      
-      .slide-icon{
-        transform: rotate(0deg);
-        left: 845px;
-      }
-    }
-
-} 

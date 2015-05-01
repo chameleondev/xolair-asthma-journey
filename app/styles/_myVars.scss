@@ -4,4 +4,51 @@ $backgroundGreenDark : #347747;
 
 $titleBg : rgba(#000,0.15);
 
-$slides : slide11 slide12 slide13 slide14;
+
+
+
+
+// slide class, bg-color, width, height, bg position
+$slides: ( 
+    ("slide11", $backgroundGreenLight, 794px,529px, 130px 150px), 
+    ("slide12", $backgroundGreenMedium, 770px,324px, 130px 210px),
+    ("slide13", $backgroundGreenDark, 938px,514px, 52px 166px),
+    ("slide141", $backgroundGreenDark, 914px,435px, 52px 166px)
+);
+
+@each $slide in $slides {
+
+	$class : nth($slide, 1);
+  	$bg-color : nth($slide, 2);
+  	$width : nth($slide, 3);
+  	$height : nth($slide, 4);
+  	$bg-position : nth($slide, 5);
+
+  .#{$class}{
+
+  	  background-color: $bg-color;
+      @include at2x('../images/#{$class}/bg',"png", $width, $height);
+      background-repeat: no-repeat;
+      background-position: $bg-position;
+      
+      .slide-icon{
+        @include at2x('../images/#{$class}/slide-icon',"png", 136px, 136px);
+        @extend .extend-slide-icon;
+      }
+      
+    }
+
+    .swiper-container{
+    	.swiper-slide-active{
+      
+	      .slide-icon{
+	        transform: rotate(0deg);
+	        left: 845px;
+	      }
+
+	    }
+    }
+
+    
+
+} 

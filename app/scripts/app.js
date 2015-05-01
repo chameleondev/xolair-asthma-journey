@@ -64,6 +64,18 @@ angular
 	      		controller : function($scope){
 
 	      		}
+	      	},
+	      	'slide13@path' : {
+	      		templateUrl: "views/path/slide13.html",
+	      		controller : function($scope){
+
+	      		}
+	      	},
+	      	'slide141@path' : {
+	      		templateUrl: "views/path/slide141.html",
+	      		controller : function($scope){
+
+	      		}
 	      	}
 	      }
 	    })
