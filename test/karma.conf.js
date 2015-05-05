@@ -24,6 +24,8 @@ module.exports = function(config) {
       'bower_components/angular-touch/angular-touch.js',
       'bower_components/swiper/dist/js/swiper.js',
       'bower_components/angular-ui-router/release/angular-ui-router.js',
+      'bower_components/odometer/odometer.js',
+      'bower_components/angular-odometer-js/dist/angular-odometer.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

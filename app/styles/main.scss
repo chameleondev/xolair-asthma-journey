@@ -4,6 +4,21 @@
 @import 'myExtends';
 
 
+@font-face {
+  font-family: 'NewsGothicStd-Bold';
+  src: url('../font/NewsGothicStd-Bold.eot?#iefix') format('embedded-opentype'),  url('../font/NewsGothicStd-Bold.woff') format('woff'), url('../font/NewsGothicStd-Bold.ttf')  format('truetype'), url('../font/NewsGothicStd-Bold.svg#NewsGothicStd-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'NewsGothicCondensed';
+  src: url('../font/NewsGothicCondensed.eot?#iefix') format('embedded-opentype'),  url('../font/NewsGothicCondensed.woff') format('woff'), url('../font/NewsGothicCondensed.ttf')  format('truetype'), url('../font/NewsGothicCondensed.svg#NewsGothicCondensed') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body{
   margin:0;
   padding: 0;
@@ -26,6 +41,10 @@ body{
 	opacity: 1;
 	transform : scale(1);
 	transition : 1s all;
+
+  &.asthma{
+    // left: 35px;
+  }
 }
 
 .ng-leave-active{
@@ -36,15 +55,20 @@ body{
 
 
 h1{
-  height: 33px;
+  font-family: 'NewsGothicStd-Bold';
+  height: 85px;
   color: #FFF;
   background-color: $titleBg;
-  padding: 20px 50px;
+  padding: 5px 50px;
   border-radius: 0 10px 10px 0;
-  width: 345px;
+  width: 440px;
   opacity: 0;
   position: relative;
   left: -445px;
+  top: 30px;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 28px;
 }
 
 .popup{
@@ -67,8 +91,8 @@ h1{
 
   .fa-times{
     position: absolute;
-    top: 73px;
-    left: 908px;
+    top: 110px;
+    left: 860px;
     font-size: 2.5em;
     color: #FFF;
   }
@@ -187,6 +211,37 @@ h1{
         }
       }
 
+      &.slide162{
+        .bg2{
+          background-position: 0 0;
+          -webkit-transition: 1s linear all; /* Safari */
+          transition: 1s linear all;
+          -webkit-transition-delay: 0.5s; /* Safari */
+          transition-delay: 0.5s;
+        }
+      }
+
+      &.slide163{
+        .bg2{
+          background-position: 0 0;
+          -webkit-transition: 1s linear all; /* Safari */
+          transition: 1s linear all;
+          -webkit-transition-delay: 0.5s; /* Safari */
+          transition-delay: 0.5s;
+        }
+      }
+
+       &.slide18{
+        .bg2{
+          -webkit-transition: 1s linear all; /* Safari */
+          transition: 1s linear all;
+          -webkit-transition-delay: 0.5s; /* Safari */
+          transition-delay: 0.5s;
+          opacity: 1;
+          top: 218px;
+        }
+      }
+
     }
 
     .road1{
@@ -268,9 +323,9 @@ h1{
 
     .slide15{
       .bg2{
-        @include at2x('../images/slide15/bg2',"png", 538px, 439px);
+        @include at2x('../images/slide15/bg2',"png", 538px, 493px);
         width: 538px;
-        height:439px;
+        height:493px;
         position: absolute;
         left: 486px;
         top: 175px;
@@ -292,12 +347,83 @@ h1{
 
     .slide16{
       .bg2{
-        @include at2x('../images/slide16/bg2',"png", 546px, 264px);
-        width: 546px;
-        height:264px;
+        @include at2x('../images/slide16/bg2',"png", 574px, 455px);
+        width: 574px;
+        height:455px;
         position: absolute;
-        left: 478px;
-        top: 223px;
+        left: 435px;
+        top: 195px;
+        opacity: 1;
+      }
+
+      .num{
+        color: white;
+        font-size: 60px;
+        position: absolute;
+        font-weight: bold;
+        
+
+        .odometer-inside{
+          font-family: 'NewsGothicCondensed';
+        }
+
+        &.num1{
+          left: 743px;
+          top: 270px;
+        }
+
+        &.num2{
+          left: 450px;
+          top: 318px;
+        }
+
+        &.num3{
+          left: 648px;
+          top: 385px;
+        }
+
+        &.num4{
+          left: 802px;
+          top: 466px;
+        }
+
+      }
+    }
+
+    .slide162{
+      .bg2{
+        @include at2x('../images/slide162/bg2',"png", 736px, 192px);
+        width: 736px;
+        height:192px;
+        position: absolute;
+        left: 163px;
+        top: 327px;
+        background-position: 0 192px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .slide163{
+      .bg2{
+        @include at2x('../images/slide163/bg2',"png", 664px, 215px);
+        width: 664px;
+        height:215px;
+        position: absolute;
+        left: 164px;
+        top: 305px;
+        background-position: 0 215px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .slide18{
+      .bg2{
+        @include at2x('../images/slide18/bg2',"png", 613px, 234px);
+        width: 613px;
+        height:234px;
+        position: absolute;
+        left: 411px;
+        top: 238px;
         opacity: 0;
       }
     }

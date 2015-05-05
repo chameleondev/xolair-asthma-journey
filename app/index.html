@@ -12,6 +12,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/swiper/dist/css/swiper.css" />
     <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/odometer/themes/odometer-theme-default.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -24,7 +25,9 @@
     <![endif]-->
 
 
-    <div class="container" ui-view="main"></div>
+    <div class="container" ui-view="main"
+    ng-class="{'asthma' : currentSlide === 0}"
+    ></div>
 <!-- 
     <div ui-view="viewA"></div>
     <div ui-view="viewB"></div> -->
@@ -38,6 +41,8 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/swiper/dist/js/swiper.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/odometer/odometer.js"></script>
+    <script src="bower_components/angular-odometer-js/dist/angular-odometer.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

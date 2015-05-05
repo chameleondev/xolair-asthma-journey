@@ -12,6 +12,12 @@ angular.module('xolairAsthmaJourneyApp')
 				// check to see if the slide has a video attached
 				videoNotPresent = function(){
 
+						if (mySwiper) {
+							$scope.$parent.currentSlide = mySwiper.activeIndex;
+						}
+
+						
+
 	    				var ele = document.querySelector('.swiper-slide-active');
 	    				
 	    				if (angular.element(ele).attr('vid')) {
@@ -32,8 +38,9 @@ angular.module('xolairAsthmaJourneyApp')
 			      	console.log(vid);
 			      	// create a video element and set attributes
 			    	newPlayer = document.createElement('video');
-			    	newPlayer.width = 854;
-			    	newPlayer.height = 480;
+			      	newPlayer.setAttribute('poster','images/poster.png');
+			    	newPlayer.width = 746;
+			    	newPlayer.height = 420;
 			      	newPlayer.setAttribute('src',vid);
 			      	// append the newly created video element to the popup
 			      	playerPopup.appendChild(newPlayer);
@@ -51,6 +58,11 @@ angular.module('xolairAsthmaJourneyApp')
 			      initialSlide : $scope.currentSlide,
 			      onSlideChangeEnd : videoNotPresent
 			    });
+
+			 //    mySwiper.on('slideChangeStart', function () {
+				//     console.log('slide change start');
+				// });
+				 
 
 
 
