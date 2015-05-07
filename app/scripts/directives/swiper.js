@@ -30,6 +30,11 @@ angular.module('xolairAsthmaJourneyApp')
 	    				
 	    		};
 
+	    		$scope.$on('$stateChangeSuccess', 
+				function(event, toState, toParams, fromState, fromParams){
+					videoNotPresent();
+				});
+
 	    		// set the vid attribute to the video element, timeout used to wait for active slide to be set
 			    setVideo = function(){
 			    	// find the active slide and get the video from the vid attribute
@@ -58,7 +63,8 @@ angular.module('xolairAsthmaJourneyApp')
 				mySwiper = new Swiper (iElm, {
 			      direction: 'horizontal',
 			      initialSlide : $scope.currentSlide,
-			      onSlideChangeEnd : videoNotPresent
+			      onSlideChangeEnd : videoNotPresent,
+			      resistanceRatio : 0
 			    });
 
 			 //    mySwiper.on('slideChangeStart', function () {

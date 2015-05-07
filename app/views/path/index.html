@@ -1,7 +1,7 @@
 <div class="swiper-container" swiper>
 	
-	<button ui-sref="map" class="map-btn"></button>
-	<button ng-click="showVideo = !showVideo" class="video-btn" ng-disabled="noVid"></button>
+	<button ui-sref="map" class="map-btn swiper-no-swiping" ng-disabled="graph1 || graph2"></button>
+	<button ng-click="showVideo = !showVideo" class="video-btn swiper-no-swiping" ng-disabled="noVid || graph1 || graph2"></button>
 	
 	<div class="swiper-wrapper">
 		<div ui-view="slide11" class="swiper-slide slide11" poster="images/poster/1.0.jpg" vid="videos/1.0.mp4"></div>
@@ -16,8 +16,8 @@
   		<div ui-view="slide161" class="swiper-slide slide161" poster="images/poster/1.6.jpg" vid="videos/1.6.mp4"></div>
   		<div ui-view="slide162" class="swiper-slide slide162"></div>
   		<div ui-view="slide163" class="swiper-slide slide163"></div>
-  		<div ui-view="slide17" class="swiper-slide slide17" poster="images/poster/1.7.jpg" vid="videos/1.7 Good disease control.mp4"></div>
-  		<div ui-view="slide18" class="swiper-slide slide18" poster="images/poster/1.8.jpg" vid="videos/1.8 New horizons.mp4"></div>
+  		<div ui-view="slide17" class="swiper-slide slide17" poster="images/poster/1.7.jpg" vid="videos/1.7.mp4"></div>
+  		<div ui-view="slide18" class="swiper-slide slide18" poster="images/poster/1.8.jpg" vid="videos/1.8.mp4"></div>
 	</div>
 	
 	<div class="popup video" ng-show="showVideo">

@@ -21,11 +21,11 @@ angular
   .module('xolairAsthmaJourneyApp')
   	.config(function($stateProvider, $urlRouterProvider){
 
-  		$urlRouterProvider.otherwise("/map");
+  		$urlRouterProvider.otherwise("/");
 
   		$stateProvider
 	    .state('map', {
-	      url: "/map",
+	      url: "/",
 	      views: {
 	      	'main' : {
 	      		templateUrl: "views/map.html",
@@ -44,7 +44,7 @@ angular
 	    })
 
 	    .state('path', {
-	      url: "/path",
+	      url: "/",
 	      views : {
 	      	'main' : {
 	      		templateUrl: "views/path/index.html"
