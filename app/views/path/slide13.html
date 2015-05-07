@@ -1,8 +1,20 @@
 <h1>
 	Asthma control<br>
 	is overestimated…
+	<span class="hazard"></span>
 </h1>
 
 <div class="slide-icon"></div>
 <div class="road3"></div>
 <div class="graph"></div>
+
+<button class="graph1-btn" ng-click="$parent.graph1 = !$parent.graph1"></button>
+<button class="graph2-btn" ng-click="$parent.graph2 = !$parent.graph2"></button>
+
+<div class="popup" ng-show="graph1" ng-click="$parent.graph1 = !$parent.graph1">
+	<div class="graph1"></div>
+</div>
+
+<div class="popup" ng-show="graph2" ng-click="$parent.graph2 = !$parent.graph2">
+	<div class="graph2"></div>		
+</div>

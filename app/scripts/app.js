@@ -31,11 +31,12 @@ angular
 	      		templateUrl: "views/map.html",
 	      		controller : function($scope,$rootScope,$state){
 
-	      			$scope.selectSlide = function(slide){
+	      			$scope.selectSlide = function(slide,event){
 	      				$rootScope.currentSlide = slide;
 	      				$state.go('path');
 	      				console.log('switching to slide:',slide);
-	      			}
+	      				event.target.classList.add('active');
+	      			};
 
 	      		}
 	      	}

@@ -4,7 +4,7 @@ angular.module('xolairAsthmaJourneyApp')
 			restrict : 'A',
 			link : function($scope, iElm, iAttrs){
 
-				var mySwiper,vid,playerPopup,setVideo,newPlayer,videoNotPresent;
+				var mySwiper,vid,playerPopup,setVideo,newPlayer,videoNotPresent,poster;
 
 				// find the video popup
 				playerPopup = document.getElementsByClassName('video')[0];
@@ -34,11 +34,13 @@ angular.module('xolairAsthmaJourneyApp')
 			    setVideo = function(){
 			    	// find the active slide and get the video from the vid attribute
 		    		vid = document.getElementsByClassName('swiper-slide-active')[0];
+			      	poster = vid.getAttribute('poster');
 			      	vid = vid.getAttribute('vid');
+			      	console.log('poster:',poster);
 			      	console.log(vid);
 			      	// create a video element and set attributes
 			    	newPlayer = document.createElement('video');
-			      	newPlayer.setAttribute('poster','images/poster.png');
+			      	newPlayer.setAttribute('poster',poster);
 			    	newPlayer.width = 746;
 			    	newPlayer.height = 420;
 			      	newPlayer.setAttribute('src',vid);
@@ -64,13 +66,13 @@ angular.module('xolairAsthmaJourneyApp')
 				// });
 				 
 
-
+				
 
 				// watch showVideo on scope
-			    $scope.$watch('showVideo',function(){
+			    $scope.$watchGroup(['showVideo','graph1','graph2'],function(){
 			    	
 			    	// if true
-			    	if ($scope.showVideo) {
+			    	if ($scope.showVideo || $scope.graph1 || $scope.graph2) {
 			    		// stop swiper
 			    		mySwiper.detachEvents();
 			    		//create video element and set attributes

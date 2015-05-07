@@ -4,24 +4,24 @@
 	<button ng-click="showVideo = !showVideo" class="video-btn" ng-disabled="noVid"></button>
 	
 	<div class="swiper-wrapper">
-		<div ui-view="slide11" class="swiper-slide slide11" vid="videos/1.1 Does your patient have severe asthma-.mp4"></div>
-  		<div ui-view="slide12" class="swiper-slide slide12" vid="videos/1.2 Asthma treatment goals.mp4"></div>
-		<div ui-view="slide13" class="swiper-slide slide13" vid="videos/1.3 Asthma control is overestimated….mp4"></div>
-  		<div ui-view="slide14" class="swiper-slide slide14" vid="videos/1.4 Evaluation and assessment need to be improved.mp4"></div>
-  		<div ui-view="slide141" class="swiper-slide slide141" vid="videos/1.4.1 Patient-physician communication is challenging.mp4"></div>
-  		<div ui-view="slide142" class="swiper-slide slide142" vid="videos/1.4.2 Reasons for poor asthma control.mp4"></div>
-  		<div ui-view="slide15" class="swiper-slide slide15" vid="videos/1.5 Corticosteroids and treatment goals.mp4"></div>
-  		<div ui-view="slide151" class="swiper-slide slide151" vid="videos/1.5.1 Avoid frequent OCS use and high ICS doses.mp4"></div>
-  		<div ui-view="slide16" class="swiper-slide slide16" vid="videos/1.6 Improving specialist referral.mp4"></div>
-  		<div ui-view="slide161" class="swiper-slide slide161" vid="videos/1.6.1 eXpeRience- Real-world observational study.mp4"></div>
+		<div ui-view="slide11" class="swiper-slide slide11" poster="images/poster/1.0 Severe asthma patient journey.jpg" vid="videos/1.1 Does your patient have severe asthma-.mp4"></div>
+  		<div ui-view="slide12" class="swiper-slide slide12" poster="images/poster/1.1 Does your patient have severe asthma.jpg" vid="videos/1.2 Asthma treatment goals.mp4"></div>
+		<div ui-view="slide13" class="swiper-slide slide13" poster="images/poster/1.2 Asthma treatment goals.jpg" vid="videos/1.3 Asthma control is overestimated….mp4"></div>
+  		<div ui-view="slide14" class="swiper-slide slide14" poster="images/poster/1.3 Asthma control is overestimatedŠ.jpg" vid="videos/1.4 Evaluation and assessment need to be improved.mp4"></div>
+  		<div ui-view="slide141" class="swiper-slide slide141" poster="images/poster/1.4 Evaluation and assessment need to be improved.jpg" vid="videos/1.4.1 Patient-physician communication is challenging.mp4"></div>
+  		<div ui-view="slide142" class="swiper-slide slide142" poster="images/poster/1.4.1 Patient-physician communication is challenging.jpg" vid="videos/1.4.2 Reasons for poor asthma control.mp4"></div>
+  		<div ui-view="slide15" class="swiper-slide slide15" poster="images/poster/1.4.2 Reasons for poor asthma control.jpg" vid="videos/1.5 Corticosteroids and treatment goals.mp4"></div>
+  		<div ui-view="slide151" class="swiper-slide slide151" poster="images/poster/1.5 Corticosteroids and treatment goals.jpg" vid="videos/1.5.1 Avoid frequent OCS use and high ICS doses.mp4"></div>
+  		<div ui-view="slide16" class="swiper-slide slide16" poster="images/poster/1.5.1 Avoid frequent OCS use and high ICS doses.jpg" vid="videos/1.6 Improving specialist referral.mp4"></div>
+  		<div ui-view="slide161" class="swiper-slide slide161" poster="images/poster/1.6 Improving specialist referral.jpg" vid="videos/1.6.1 eXpeRience- Real-world observational study.mp4"></div>
   		<div ui-view="slide162" class="swiper-slide slide162"></div>
   		<div ui-view="slide163" class="swiper-slide slide163"></div>
-  		<div ui-view="slide17" class="swiper-slide slide17" vid="videos/1.7 Good disease control.mp4"></div>
-  		<div ui-view="slide18" class="swiper-slide slide18" vid="videos/1.8 New horizons.mp4"></div>
+  		<div ui-view="slide17" class="swiper-slide slide17" poster="images/poster/1.7 Good disease control.jpg" vid="videos/1.7 Good disease control.mp4"></div>
+  		<div ui-view="slide18" class="swiper-slide slide18" poster="images/poster/1.8 New horizons.jpg" vid="videos/1.8 New horizons.mp4"></div>
 	</div>
 	
 	<div class="popup video" ng-show="showVideo">
-		<i class="fa fa-times" ng-click="showVideo = !showVideo"></i>
+		<i class="close" ng-click="showVideo = !showVideo"></i>
 	</div>
 
 </div>

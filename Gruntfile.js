@@ -376,6 +376,8 @@ module.exports = function (grunt) {
             '*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
+            'fonts/*',
+            'videos/*',
             'styles/fonts/{,*/}*.*'
           ]
         }, {
@@ -383,6 +385,13 @@ module.exports = function (grunt) {
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
+        }, {
+          //for font-awesome
+          expand: true,
+          dot: true,
+          cwd: 'bower_components/fontawesome',
+          src: ['fonts/*.*'],
+          dest: '<%= yeoman.dist %>'
         }]
       },
       styles: {
