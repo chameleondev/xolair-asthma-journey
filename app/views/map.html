@@ -1,18 +1,20 @@
 <div class="map">
 	
-	<h1>
-		Improving the severe<br>
-		asthma patient journey
-	</h1>
 
-	<button ng-click="selectSlide(0,$event)" class="asthma-btn"></button>
-	<button ng-click="selectSlide(1,$event)" class="asthma-treatment-btn"></button>
-	<button ng-click="selectSlide(2,$event)" class="overestimating-btn"></button>
-	<button ng-click="selectSlide(4,$event)" class="lacking-btn"></button>
-	<button ng-click="selectSlide(8,$event)" class="improving-btn"></button>
-	<button ng-click="selectSlide(12,$event)" class="good-btn"></button>
-	<button ng-click="selectSlide(6,$event)" class="corticosteroids-btn"></button>
-	<button ng-click="selectSlide(13,$event)" class="horizons-btn"></button>
+	<button ng-click="showVideo = !showVideo" class="video-btn swiper-no-swiping" ng-disabled="noVid || graph1 || graph2" poster="images/poster/1.1.jpg" vid="videos/1.1.mp4"></button>
+
+	<button ng-click="selectSlide(0,$event)" pop="0.25" class="asthma-btn"></button>
+	<button ng-click="selectSlide(1,$event)" pop="0.5" class="asthma-treatment-btn"></button>
+	<button ng-click="selectSlide(2,$event)" pop="0.75" class="overestimating-btn"></button>
+	<button ng-click="selectSlide(4,$event)" pop="1" class="lacking-btn"></button>
+	<button ng-click="selectSlide(8,$event)" pop="1.25" class="improving-btn"></button>
+	<button ng-click="selectSlide(12,$event)" pop="1.5" class="good-btn"></button>
+	<button ng-click="selectSlide(6,$event)" pop="1.75" class="corticosteroids-btn"></button>
+	<button ng-click="selectSlide(13,$event)" pop="2" class="horizons-btn"></button>
+
+	<div class="popup video" ng-show="showVideo">
+		<i class="close" ng-click="showVideo = !showVideo"></i>
+	</div>
 
 </div>
 

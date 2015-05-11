@@ -38,6 +38,10 @@ angular
 	      				event.target.classList.add('active');
 	      			};
 
+	      			$scope.$watch('showVideo',function(){
+	      				console.log('changed')
+	      			})
+
 	      		}
 	      	}
 	      }
