@@ -45,7 +45,7 @@ $slides: (
       background-position: $bg-position;
       
       .slide-icon{
-        @include at2x('../images/#{$class}/slide-icon',"png", 136px, 136px);
+        @include at2x('../images/#{$class}/slide-icon',"png", 152px, 152px);
         @extend .extend-slide-icon;
       }
       
