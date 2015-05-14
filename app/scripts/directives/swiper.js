@@ -53,6 +53,12 @@ angular.module('xolairAsthmaJourneyApp')
 			      	playerPopup.appendChild(newPlayer);
 			      	// enable html5 video controls
 			      	newPlayer.setAttribute('controls',true);
+			      	newPlayer.setAttribute('autoplay',true);
+
+			      	newPlayer.onended = function(){	
+			      		$scope.showVideo = false;
+			      		$scope.$apply();
+			      	};
 			    };
 
 

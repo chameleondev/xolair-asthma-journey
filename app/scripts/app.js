@@ -31,16 +31,61 @@ angular
 	      		templateUrl: "views/map.html",
 	      		controller : function($scope,$rootScope,$state){
 
+	      			var mySwiper,vid,playerPopup,setVideo,newPlayer,videoNotPresent,poster;
+
+	      			if($rootScope.count === 0){
+	      				$scope.showVideo = true;
+	      			}
+	      			
+
 	      			$scope.selectSlide = function(slide,event){
 	      				$rootScope.currentSlide = slide;
 	      				$state.go('path');
-	      				console.log('switching to slide:',slide);
 	      				event.target.classList.add('active');
 	      			};
 
-	      			$scope.$watch('showVideo',function(){
-	      				console.log('changed')
-	      			})
+		      		setVideo = function(){
+				    	// find the active slide and get the video from the vid attribute
+			    		vid = document.getElementsByClassName('video-btn')[0];
+			    		playerPopup = document.getElementsByClassName('video')[0];
+				      	poster = vid.getAttribute('poster');
+				      	vid = vid.getAttribute('vid');
+				      	console.log('poster:',poster);
+				      	console.log(vid);
+				      	// create a video element and set attributes
+				    	newPlayer = document.createElement('video');
+				      	newPlayer.setAttribute('poster',poster);
+				    	newPlayer.width = 746;
+				    	newPlayer.height = 420;
+				      	newPlayer.setAttribute('src',vid);
+				      	// append the newly created video element to the popup
+				      	playerPopup.appendChild(newPlayer);
+				      	// enable html5 video controls
+				      	newPlayer.setAttribute('controls',true);
+				      	newPlayer.setAttribute('autoplay',true);
+
+				      	newPlayer.onended = function(){	
+				      		$scope.showVideo = false;
+				      		$scope.$apply();
+				      	};
+				    };
+		      			
+		      		// watch showVideo on scope
+				    $scope.$watch('showVideo',function(){
+				    	
+				    	// if true
+				    	if ($scope.showVideo) {
+				    		//create video element and set attributes
+				    		setVideo();
+				    		$rootScope.count++;
+				    	}else{
+				    		// if the newPlayer exists 
+				    		if (newPlayer !== undefined) {
+				    			playerPopup.removeChild(newPlayer);
+				    		}
+				    	}
+
+				    });
 
 	      		}
 	      	}
@@ -51,7 +96,14 @@ angular
 	      url: "/",
 	      views : {
 	      	'main' : {
-	      		templateUrl: "views/path/index.html"
+	      		templateUrl: "views/path/index.html",
+	      		controller : function ($scope,$state){
+
+	      			$scope.swipe = function(){
+	      				$state.go('map')
+	      			};
+
+	      		}
 	      	},
 	      	'slide11@path' : {
 	      		templateUrl: "views/path/slide11.html"
@@ -78,34 +130,7 @@ angular
 	      		templateUrl: "views/path/slide151.html"
 	      	},
 	      	'slide16@path' : {
-	      		templateUrl: "views/path/slide16.html",
-	      		controller : function($scope,$timeout,$rootScope){
-
-	      			$rootScope.$watch('currentSlide',function(newVal,oldVal){
-
-	      				console.log('new val: ',newVal);
-	      				console.log('old val: ',oldVal);
-
-	      				if (newVal === 8) {
-	      					$timeout(function(){
-	      						$scope.num1 = 6500;
-				      			$scope.num2 = 771;
-				      			$scope.num3 = 31;
-				      			$scope.num4 = 3200;
-	      					},1000);
-		      				
-	      				} else{
-	      					$scope.num1 = 0;
-			      			$scope.num2 = 0;
-			      			$scope.num3 = 0;
-			      			$scope.num4 = 0;
-	      				}
-	      				
-
-	      			});
-	      			
-
-	      		}
+	      		templateUrl: "views/path/slide16.html"
 	      	},
 	      	'slide161@path' : {
 	      		templateUrl: "views/path/slide161.html"
@@ -126,3 +151,46 @@ angular
 	    })
 
   	});
+
+angular
+  .module('xolairAsthmaJourneyApp')
+  .run(function($rootScope,$state,$timeout){
+  	$rootScope.count = 0;
+
+
+  	 // idleTimer() takes an optional object argument that defines any/all setting
+    $( document ).idleTimer( {
+        timeout:1000 * 60 * 5, 
+        idle:true
+    });
+
+
+     $( document ).on( "idle.idleTimer", function(event, elem, obj){
+        $state.go('map');
+    });
+
+     $rootScope.$watch('currentSlide',function(newVal,oldVal){
+
+		console.log('new val: ',newVal);
+		console.log('old val: ',oldVal);
+
+		if (newVal === 8) {
+			$timeout(function(){
+				$rootScope.num1 = 6500;
+	  			$rootScope.num2 = 771;
+	  			$rootScope.num3 = 31;
+	  			$rootScope.num4 = 3200;
+			},1000);
+			
+		} else{
+			$rootScope.num1 = 0;
+			$rootScope.num2 = 0;
+			$rootScope.num3 = 0;
+			$rootScope.num4 = 0;
+		}
+		
+
+	});
+
+
+  })
