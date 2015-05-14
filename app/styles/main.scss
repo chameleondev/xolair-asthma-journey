@@ -647,87 +647,108 @@ h1{
   button{
     transition: 1s all;
     &.active{
-      top: 40px;
-      left: 865px;
+      transform: translate(880px,65px) scale(1.8) rotate(360deg);
       z-index: 999999999999;
-      transform: rotate(360deg) scale(1.8);
     }
   }
 
-  .wait{
-    transform: scale(0);
-  }
 
   .asthma-btn{
   	@extend .btn;
   	@include at2x('../images/asthma',"png", 103px, 103px);
-  	width: 103px;
-  	height: 103px;
-  	top: 231px;
-    left: 54px;
+    @include transform(translate(54px,231px) scale(1) rotate(0));
+    width: 103px;
+    height: 103px;
+
+    &.wait{
+      @include transform(translate(54px,231px) scale(0) rotate(0));
+    }
+
   }
 
   .asthma-treatment-btn{
   	@extend .btn;
   	@include at2x('../images/asthma-treatment',"png", 83px, 83px);
+    @include transform(translate(231px,375px) scale(1) rotate(0));
   	width: 83px;
   	height: 83px;
-  	top: 375px;
-    left: 231px;
+
+    &.wait{
+      @include transform(translate(231px,375px) scale(0) rotate(0));
+    }
+
   }
 
   .overestimating-btn{
   	@extend .btn;
   	@include at2x('../images/overestimating',"png", 83px, 83px);
+    @include transform(translate(408px,375px) scale(1) rotate(0));
   	width: 83px;
   	height: 83px;
-  	top: 375px;
-    left: 408px;
+
+    &.wait{
+      @include transform(translate(408px,375px) scale(0) rotate(0));
+    }
   }
 
   .lacking-btn{
   	@extend .btn;
   	@include at2x('../images/lacking',"png", 83px, 83px);
+    @include transform(translate(582px,375px) scale(1) rotate(0));
   	width: 83px;
   	height: 83px;
-  	top: 375px;
-    left: 582px;
+
+    &.wait{
+      @include transform(translate(582px,375px) scale(0) rotate(0));
+    }
   }
 
   .improving-btn{
   	@extend .btn;
   	@include at2x('../images/improving',"png", 83px, 83px);
+    @include transform(translate(797px,375px) scale(1) rotate(0));
   	width: 83px;
   	height: 83px;
-  	top: 375px;
-    left: 797px;
+
+    &.wait{
+      @include transform(translate(797px,375px) scale(0) rotate(0));
+    }
   }
 
   .good-btn{
   	@extend .btn;
   	@include at2x('../images/good',"png", 83px, 83px);
+    @include transform(translate(888px,270px) scale(1) rotate(0));
   	width: 83px;
   	height: 83px;
-  	top: 270px;
-    left: 888px;
+
+    &.wait{
+      @include transform(translate(888px,270px) scale(0) rotate(0));
+    }
   }
 
   .corticosteroids-btn{
   	@extend .btn;
   	@include at2x('../images/corticosteroids',"png", 83px, 83px);
+    @include transform(translate(439px,511px) scale(1) rotate(0));
   	width: 83px;
   	height: 83px;
-  	top: 511px;
-    left: 439px;
+
+    &.wait{
+      @include transform(translate(439px,511px) scale(0) rotate(0));
+    }
   }
 
   .horizons-btn{
   	@extend .btn;
   	@include at2x('../images/horizons',"png", 103px, 103px);
+    @include transform(translate(897px,46px) scale(1) rotate(0));
   	width: 103px;
   	height: 103px;
-  	top: 46px;
-    left: 897px;
+
+    &.wait{
+      @include transform(translate(897px,46px) scale(0) rotate(0));
+    }
   }
 
 }
