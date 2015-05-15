@@ -84,11 +84,13 @@ angular.module('xolairAsthmaJourneyApp')
 			    $scope.$watchGroup(['showVideo','graph1','graph2'],function(){
 			    	
 			    	// if true
-			    	if ($scope.showVideo || $scope.graph1 || $scope.graph2) {
+			    	if ($scope.showVideo) {
 			    		// stop swiper
 			    		mySwiper.detachEvents();
 			    		//create video element and set attributes
 			    		setVideo();
+			    	} else if($scope.graph1 || $scope.graph2){
+			   			mySwiper.detachEvents();
 			    	}else{
 			    		// start swiper
 			    		mySwiper.attachEvents();

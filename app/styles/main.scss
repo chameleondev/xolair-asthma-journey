@@ -348,7 +348,7 @@ h1{
           -webkit-transition-delay: 0.5s; /* Safari */
           transition-delay: 0.5s;
           opacity: 1;
-          top: 218px;
+          top: 204px;
         }
       }
 
@@ -396,9 +396,9 @@ h1{
 
     .slide13{
       .graph{
-        @include at2x('../images/slide13/graph',"png", 804px, 172px);
+        @include at2x('../images/slide13/graph',"png", 822px, 172px);
         background-position: 0 172px;
-        width: 804px;
+        width: 822px;
         height:172px;
         position: absolute;
         left: 121px;
@@ -406,16 +406,16 @@ h1{
       }
 
       .graph1{
-        @include at2x('../images/slide13/graph1',"png", 625px, 659px);
-        width: 625px;
+        @include at2x('../images/slide13/graph1',"png", 609px, 659px);
+        width: 609px;
         height:659px;
         @extend .absolute-center;
       }
 
       .graph2{
-        @include at2x('../images/slide13/graph2',"png", 625px, 608px);
-        width: 625px;
-        height:608px;
+        @include at2x('../images/slide13/graph2',"png", 610px, 659px);
+        width: 610px;
+        height:659px;
         @extend .absolute-center;
       }
     }
@@ -427,7 +427,7 @@ h1{
         height:507px;
         position: absolute;
         left: 250px;
-        top: 150px;
+        top: 170px;
         opacity: 0;
         transform:rotate(-90deg);
       }
@@ -479,11 +479,11 @@ h1{
 
     .slide16{
       .bg2{
-        @include at2x('../images/slide16/bg2',"png", 597px, 455px);
-        width: 597px;
+        @include at2x('../images/slide16/bg2',"png", 574px, 455px);
+        width: 574px;
         height:455px;
         position: absolute;
-        left: 415px;
+        left: 435px;
         top: 195px;
         opacity: 1;
       }
@@ -502,6 +502,7 @@ h1{
         &.num1{
           left: 743px;
           top: 270px;
+          color: #e5ff90;
         }
 
         &.num2{
@@ -512,11 +513,13 @@ h1{
         &.num3{
           left: 648px;
           top: 385px;
+          color: #1d404a;
         }
 
         &.num4{
           left: 802px;
           top: 466px;
+          color: #e5ff90;
         }
 
       }
@@ -524,26 +527,26 @@ h1{
 
     .slide162{
       .bg2{
-        @include at2x('../images/slide162/bg2',"png", 736px, 192px);
+        @include at2x('../images/slide162/bg2',"png", 736px, 166px);
         width: 736px;
-        height:192px;
+        height:166px;
         position: absolute;
         left: 163px;
-        top: 327px;
+        top: 361px;
         background-position: 0 192px;
         background-repeat: no-repeat;
       }
 
       .graph1{
-        @include at2x('../images/slide162/graph1',"png", 625px, 608px);
-        width: 625px;
+        @include at2x('../images/slide162/graph1',"png", 609px, 608px);
+        width: 609px;
         height:608px;
         @extend .absolute-center;
       }
 
       .graph2{
-        @include at2x('../images/slide162/graph2',"png", 625px, 608px);
-        width: 625px;
+        @include at2x('../images/slide162/graph2',"png", 610px, 608px);
+        width: 610px;
         height:608px;
         @extend .absolute-center;
       }
@@ -562,15 +565,15 @@ h1{
       }
 
       .graph1{
-        @include at2x('../images/slide163/graph1',"png", 625px, 608px);
-        width: 625px;
+        @include at2x('../images/slide163/graph1',"png", 609px, 608px);
+        width: 609px;
         height:608px;
         @extend .absolute-center;
       }
 
       .graph2{
-        @include at2x('../images/slide163/graph2',"png", 625px, 608px);
-        width: 625px;
+        @include at2x('../images/slide163/graph2',"png", 610px, 608px);
+        width: 610px;
         height:608px;
         @extend .absolute-center;
       }
@@ -578,12 +581,12 @@ h1{
 
     .slide18{
       .bg2{
-        @include at2x('../images/slide18/bg2',"png", 613px, 234px);
-        width: 613px;
+        @include at2x('../images/slide18/bg2',"png", 598px, 234px);
+        width: 598px;
         height:234px;
         position: absolute;
-        left: 411px;
-        top: 238px;
+        left: 426px;
+        top: 224px;
         opacity: 0;
       }
     }
