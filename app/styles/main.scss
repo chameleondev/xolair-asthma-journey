@@ -270,7 +270,7 @@ h1{
           -webkit-transition-delay: 0.5s; /* Safari */
           transition-delay: 0.5s;
           opacity: 1;
-          top: 155px;
+					@include transform (translate(478px,60px));
         }
       }
 
@@ -280,7 +280,7 @@ h1{
           transition: 1s linear all;
           -webkit-transition-delay: 0.5s; /* Safari */
           transition-delay: 0.5s;
-          top: 203px;
+          @include transform (translate(478px,80px));
           opacity: 1;
         }
       }
@@ -348,7 +348,7 @@ h1{
           -webkit-transition-delay: 0.5s; /* Safari */
           transition-delay: 0.5s;
           opacity: 1;
-          top: 204px;
+          @include translate(426px,100px);
         }
       }
 
@@ -402,7 +402,7 @@ h1{
         height:172px;
         position: absolute;
         left: 121px;
-        top: 317px;
+        top: 336px;
       }
 
       .graph1{
@@ -435,19 +435,19 @@ h1{
 
     .slide141{
       .graph{
-        @include at2x('../images/slide141/graph',"png", 330px, 150px);
+        @include at2x('../images/slide141/graph',"png", 316px, 150px);
         background-position: 0 150px;
-        width: 330px;
+        width: 316px;
         height:150px;
         position: absolute;
-        left: 595px;
-        top: 366px;
+        left: 618px;
+  			top: 384px;
       }
 
       .graph1{
-        @include at2x('../images/slide141/graph1',"png", 660px, 608px);
-        width: 660px;
-        height:608px;
+        @include at2x('../images/slide141/graph1',"png", 609px, 575px);
+        width: 609px;
+        height:575px;
         @extend .absolute-center;
       }
 
@@ -459,8 +459,7 @@ h1{
         width: 538px;
         height:493px;
         position: absolute;
-        left: 486px;
-        top: 175px;
+        @include transform (translate(478px,80px));
         opacity: 0;
       }
     }
@@ -471,8 +470,7 @@ h1{
         width: 546px;
         height:264px;
         position: absolute;
-        left: 478px;
-        top: 223px;
+        @include transform (translate(478px,100px));
         opacity: 0;
       }
     }
@@ -554,12 +552,12 @@ h1{
 
     .slide163{
       .bg2{
-        @include at2x('../images/slide163/bg2',"png", 664px, 215px);
-        width: 664px;
-        height:215px;
+        @include at2x('../images/slide163/bg2',"png", 703px, 216px);
+        width: 703px;
+        height:216px;
         position: absolute;
         left: 164px;
-        top: 305px;
+        top: 312px;
         background-position: 0 215px;
         background-repeat: no-repeat;
       }
@@ -585,8 +583,9 @@ h1{
         width: 598px;
         height:234px;
         position: absolute;
-        left: 426px;
-        top: 224px;
+        // left: 426px;
+        // top: 224px;
+        @include translate(426px,120px);
         opacity: 0;
       }
     }
