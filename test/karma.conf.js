@@ -28,6 +28,7 @@ module.exports = function(config) {
       'bower_components/odometer/odometer.js',
       'bower_components/angular-odometer-js/dist/angular-odometer.js',
       'bower_components/jquery-idletimer/dist/idle-timer.js',
+      'bower_components/jquery-animateNumber/jquery.animateNumber.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

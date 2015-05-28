@@ -23,6 +23,10 @@
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+// *:not(html) {
+//     -webkit-transform: translate3d(0, 0, 1px);
+// }
+
 body{
   margin:0;
   padding: 0;
@@ -62,7 +66,6 @@ button{
 }
 
 
-
 h1{
   font-family: 'NewsGothicStd-Bold';
   height: 85px;
@@ -88,6 +91,23 @@ h1{
     left: 565px;
     top: 0;
   }
+}
+
+.code{
+  position: absolute;
+  left: 915px;
+  top: 754px;
+  font-size: 10px;
+  color: white;
+}
+
+.video-text{
+    position: absolute;
+    z-index: 9999;
+    top: 738px;
+    left: 127px;
+    color: #FFF;
+    font-size: 10px;
 }
 
 .popup{
@@ -121,6 +141,16 @@ h1{
     z-index: 9999;
     background-repeat: no-repeat;
     background-position: 15px 25px;
+  }
+
+  .small-print{
+    width: 700px;
+    height: 200px;
+    padding : 25px;
+    background: $backgroundGrey;
+    color: white;
+    border: solid 5px white;
+    @extend .absolute-center;
   }
 
 }
@@ -161,7 +191,7 @@ h1{
       
       h1{
         opacity: 1;
-        @include transform(translate(0,0));
+        @include transform(translate3d(0,0,0));
         -webkit-transition: 1s all; /* Safari */
         transition: 1s all;
         -webkit-transition-delay: 0.5s; /* Safari */
@@ -394,6 +424,74 @@ h1{
       z-index: -100;
     }
 
+    .slide11{
+      .block1{
+        position: absolute;
+        top: 192px;
+        left: 131px;
+        height: 115px;
+        width: 360px;
+      }
+
+      .block2{
+        position: absolute;
+        top: 335px;
+        left: 131px;
+        height: 115px;
+        width: 360px;
+      }
+
+      .block3{
+        position: absolute;
+        top: 456px;
+        left: 131px;
+        height: 160px;
+        width: 360px;
+      }
+
+      .block4{
+        position: absolute;
+        top: 335px;
+        left: 565px;
+        height: 115px;
+        width: 360px;
+      }
+    }
+
+    .slide12{
+      .block1{
+        position: absolute;
+        top: 265px;
+        left: 131px;
+        height: 127px;
+        width: 360px;
+      }
+
+      .block2{
+        position: absolute;
+        top: 417px;
+        left: 131px;
+        height: 115px;
+        width: 360px;
+      }
+
+      .block3{
+        position: absolute;
+        top: 255px;
+        left: 534px;
+        height: 151px;
+        width: 368px;
+      }
+
+      .block4{
+        position: absolute;
+        top: 410px;
+        left: 565px;
+        height: 140px;
+        width: 360px;
+      }
+    }
+
     .slide13{
       .graph{
         @include at2x('../images/slide13/graph',"png", 822px, 172px);
@@ -477,12 +575,12 @@ h1{
 
     .slide16{
       .bg2{
-        @include at2x('../images/slide16/bg2',"png", 574px, 455px);
+        @include at2x('../images/slide16/bg2',"png", 574px, 466px);
         width: 574px;
-        height:455px;
+        height:466px;
         position: absolute;
         left: 435px;
-        top: 195px;
+        top: 207px;
         opacity: 1;
       }
 
@@ -491,11 +589,7 @@ h1{
         font-size: 60px;
         position: absolute;
         font-weight: bold;
-        
-
-        .odometer-inside{
-          font-family: 'NewsGothicCondensed';
-        }
+        font-family: 'NewsGothicCondensed';
 
         &.num1{
           left: 743px;
@@ -617,6 +711,21 @@ h1{
   }
 }
 
+.arrow-btn{
+  @extend .btn;
+  @extend .bottom-btn;
+  @include at2x('../images/next',"png", 67px, 40px);
+  left: 914px;
+  border-radius:5px 0 0 5px;
+  -moz-border-radius:5px 0 0 5px;
+  -webkit-border-radius:5px 0 0 5px;
+  background-position: 25px 18px;
+
+  &[disabled]{
+    opacity: 0.3;
+  }
+}
+
 .video-btn{
   @extend .btn;
   @extend .bottom-btn;
@@ -635,7 +744,7 @@ h1{
 
 .map{
   @extend .inherit-size;
-  @include at2x('../images/map-bg',"png", 1002px, 708px);
+  @include at2x('../images/map-bg',"png", 1002px, 719px);
   background-color: $backgroundGreenLight;
   background-repeat: no-repeat;
   background-position: 0 40px;
@@ -649,7 +758,7 @@ h1{
   button{
     transition: 1s all;
     &.active{
-      transform: translate(880px,65px) scale(1.8) rotate(360deg);
+      @include transform(translate(880px,65px) scale(1.8) rotate(360deg));
       z-index: 999999999999;
     }
   }

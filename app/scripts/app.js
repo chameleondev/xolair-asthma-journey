@@ -33,9 +33,10 @@ angular
 
 	      			var mySwiper,vid,playerPopup,setVideo,newPlayer,videoNotPresent,poster;
 
-	      			if($rootScope.count === 0){
-	      				$scope.showVideo = true;
-	      			}
+	      			// if($rootScope.count === 0){
+	      			// 	$scope.showSmallPrint = true;
+	      			// 	$rootScope.count++;
+	      			// }
 	      			
 
 	      			$scope.selectSlide = function(slide,event){
@@ -77,7 +78,6 @@ angular
 				    	if ($scope.showVideo) {
 				    		//create video element and set attributes
 				    		setVideo();
-				    		$rootScope.count++;
 				    	}else{
 				    		// if the newPlayer exists 
 				    		if (newPlayer !== undefined) {
@@ -97,11 +97,33 @@ angular
 	      views : {
 	      	'main' : {
 	      		templateUrl: "views/path/index.html",
-	      		controller : function ($scope,$state){
+	      		controller : function ($scope,$state,$timeout){
 
 	      			$scope.swipe = function(){
 	      				$state.go('map')
 	      			};
+
+	      			$scope.showArrow = false;
+
+	      			$scope.$on('slideChanged',function(event,slide){
+
+				    	$timeout(function(){
+
+		      				switch(slide){
+		      					case 3:
+		      					case 4:
+		      					case 6:
+		      					case 8:
+		      					case 9:
+		      					$scope.showArrow = true;
+		      					break;
+
+		      					default:
+		      					$scope.showArrow = false;
+		      				}
+				    	});
+
+				    });
 
 	      		}
 	      	},
@@ -168,29 +190,6 @@ angular
      $( document ).on( "idle.idleTimer", function(event, elem, obj){
         $state.go('map');
     });
-
-     $rootScope.$watch('currentSlide',function(newVal,oldVal){
-
-		console.log('new val: ',newVal);
-		console.log('old val: ',oldVal);
-
-		if (newVal === 8) {
-			$timeout(function(){
-				$rootScope.num1 = 6500;
-	  			$rootScope.num2 = 771;
-	  			$rootScope.num3 = 31;
-	  			$rootScope.num4 = 3200;
-			},1000);
-			
-		} else{
-			$rootScope.num1 = 0;
-			$rootScope.num2 = 0;
-			$rootScope.num3 = 0;
-			$rootScope.num4 = 0;
-		}
-		
-
-	});
 
 
   })

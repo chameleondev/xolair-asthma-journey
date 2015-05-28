@@ -1,5 +1,5 @@
 angular.module('xolairAsthmaJourneyApp')
-	.directive('swiper',function(){
+	.directive('swiper',function($timeout){
 		return {
 			restrict : 'A',
 			link : function($scope, iElm, iAttrs){
@@ -9,24 +9,29 @@ angular.module('xolairAsthmaJourneyApp')
 				// find the video popup
 				playerPopup = document.getElementsByClassName('video')[0];
 
+
 				// check to see if the slide has a video attached
 				videoNotPresent = function(){
 
 						if (mySwiper) {
 							$scope.$parent.currentSlide = mySwiper.activeIndex;
+
+							$scope.$broadcast('slideChanged',mySwiper.activeIndex);
 						}
 
 						
 
 	    				var ele = document.querySelector('.swiper-slide-active');
-	    				
-	    				if (angular.element(ele).attr('vid')) {
-	    					$scope.noVid = false;
-	    					$scope.$apply();
-	    				}else{
-	    					$scope.noVid = true;
-	    					$scope.$apply();
-	    				}
+
+	    				$timeout(function(){
+
+	    					if (angular.element(ele).attr('vid')) {
+		    					$scope.noVid = false;
+		    				}else{
+		    					$scope.noVid = true;
+		    				}
+
+	    				});				
 	    				
 	    		};
 
@@ -78,7 +83,9 @@ angular.module('xolairAsthmaJourneyApp')
 				// });
 				 
 
-				
+				$scope.nextSlide = function(){
+					mySwiper.slideNext();
+				};
 
 				// watch showVideo on scope
 			    $scope.$watchGroup(['showVideo','graph1','graph2'],function(){

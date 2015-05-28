@@ -13,20 +13,20 @@ $titleBg : rgba(#000,0.15);
 
 // slide class, bg-color, width, height, bg position
 $slides: ( 
-    ("slide11", $backgroundGreenLight, 794px,510px, 130px 192px), 
-    ("slide12", $backgroundGreenMedium, 770px,284px, 130px 260px),
-    ("slide13", $backgroundGreenDark, 927px,514px, 52px 185px),
-    ("slide14", $backgroundGreenDark, 869px,545px, 85px 185px),
-    ("slide141", $backgroundGreenDark, 926px,685px, 50px 13px),
-    ("slide142", $backgroundGreenDark, 977px,710px, 50px 13px),
-    ("slide15", $backgroundGrey, 603px,514px, 50px 190px),
-    ("slide151", $backgroundGrey, 924px,685px, 50px 13px),
-    ("slide16", $backgroundBlue, 587px,516px, 50px 190px),
-    ("slide161", $backgroundBlue, 852px,734px, 50px 13px),
-    ("slide162", $backgroundBlue, 927px,698px, 50px 13px),
-    ("slide163", $backgroundBlue, 927px,684px, 50px 13px),
-    ("slide17", $backgroundGreenMedium, 909px,560px, 50px 185px),
-    ("slide18", $backgroundDarkBlue, 508px,518px, 50px 185px)
+    ("slide11", $backgroundGreenLight, 871px,572px, 130px 192px), 
+    ("slide12", $backgroundGreenMedium, 870px,497px, 130px 265px),
+    ("slide13", $backgroundGreenDark, 945px,576px, 52px 185px),
+    ("slide14", $backgroundGreenDark, 884px,579px, 112px 185px),
+    ("slide141", $backgroundGreenDark, 944px,747px, 50px 14px),
+    ("slide142", $backgroundGreenDark, 977px,747px, 50px 14px),
+    ("slide15", $backgroundGrey, 943px,576px, 53px 186px),
+    ("slide151", $backgroundGrey, 947px,747px, 50px 14px),
+    ("slide16", $backgroundBlue, 946px,578px, 50px 184px),
+    ("slide161", $backgroundBlue, 945px,747px, 50px 14px),
+    ("slide162", $backgroundBlue, 945px,747px, 50px 14px),
+    ("slide163", $backgroundBlue, 945px,747px, 50px 14px),
+    ("slide17", $backgroundGreenMedium, 945px,585px, 50px 177px),
+    ("slide18", $backgroundDarkBlue, 945px,579px, 50px 183px)
 );
 
 @each $slide in $slides {
