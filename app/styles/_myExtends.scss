@@ -31,9 +31,9 @@
   width: 152px;
   height: 152px;
   position: absolute;
-  left :845px;
+  left: 845px;
   top: 20px;
   // transform: rotate(360deg);
   // transition: 1s all;
-  @include translate3d(0,0,0);
+  // @include translate3d(0,0,1px);
 }
