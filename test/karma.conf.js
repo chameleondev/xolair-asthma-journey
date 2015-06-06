@@ -27,8 +27,8 @@ module.exports = function(config) {
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'bower_components/odometer/odometer.js',
       'bower_components/angular-odometer-js/dist/angular-odometer.js',
-      'bower_components/jquery-idletimer/dist/idle-timer.js',
-      'bower_components/jquery-animateNumber/jquery.animateNumber.js',
+      'bower_components/jquery-idletimer/dist/idle-timer.min.js',
+      'bower_components/jquery-animateNumber/jquery.animateNumber.min.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
