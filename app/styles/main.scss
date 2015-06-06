@@ -378,7 +378,7 @@ h1{
           -webkit-transition-delay: 0.5s; /* Safari */
           transition-delay: 0.5s;
           opacity: 1;
-          @include translate(426px,100px);
+          @include translate3d(426px,100px,0);
         }
       }
 
